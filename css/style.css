@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: #faf6f0;
+    color: #3e2723;
+    background-image: 
+        radial-gradient(#e2d5c5 1px, transparent 1px),
+        linear-gradient(to right, rgba(210, 190, 170, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px, 120px 120px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #442518 0%, #29150d 100%);
+    color: #fff9f2;
+    border-bottom: 4px solid #c83e2b;
+    box-shadow: 0 6px 20px rgba(41, 21, 13, 0.18);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1::after {
+    content: "✈";
+    color: #e54b3c;
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+header h1:hover::after {
+    transform: translateX(8px) translateY(-3px) scale(1.1);
+}
+
+header nav {
+    display: flex;
+    gap: 18px;
+}
+
+header nav a {
+    color: #f4eae0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    background-color: #c83e2b;
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+section {
+    margin-bottom: 56px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #3b271d;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 24px;
+    background-color: #c83e2b;
+    border-radius: 4px;
+}
+
+#destinatii h2::after {
+    content: "🗺 Trasee & Itinerarii";
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8d5b4c;
+    margin-left: auto;
+}
+
+#destinatii {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+#destinatii h2 {
+    grid-column: 1 / -1;
+}
+
+article {
+    background-color: #ffffff;
+    border: 1px solid #ebd9c8;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(68, 37, 24, 0.05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+article::before {
+    content: "📍 Destinație";
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #a04e39;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+}
+
+article h3 {
+    font-size: 1.35rem;
+    color: #29150d;
+    margin-bottom: 4px;
+}
+
+article p:first-of-type {
+    font-weight: 700;
+    color: #6d402b;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+article p:nth-of-type(2) {
+    font-size: 0.92rem;
+    color: #4b362a;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+article p:last-of-type {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #29150d;
+    border-top: 1px dashed #d5bba8;
+    padding-top: 12px;
+}
+
+article:hover,
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(68, 37, 24, 0.15);
+    border-color: #c83e2b;
+}
+
+article.featured,
+.featured {
+    border: 2px solid #c83e2b;
+    background: linear-gradient(180deg, #fffdfb 0%, #fff7f2 100%);
+    box-shadow: 0 8px 24px rgba(200, 62, 43, 0.12);
+}
+
+article.featured::after {
+    content: "ZBOR DIRECT ✈";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #c83e2b;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #ebd9c8;
+    box-shadow: 0 6px 20px rgba(68, 37, 24, 0.06);
+    position: relative;
+}
+
+form::before {
+    content: "REZERVĂ ITINERARIUL ✈ 🚌";
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #a04e39;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #ebd9c8;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #442518;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #dcc6b1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background-color: #fdfcf9;
+    color: #3b271d;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #c83e2b;
+    box-shadow: 0 0 0 3px rgba(200, 62, 43, 0.2);
+}
+
+button {
+    margin-top: 24px;
+    padding: 14px;
+    background: linear-gradient(135deg, #c83e2b 0%, #a42c1b 100%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 6px 16px rgba(200, 62, 43, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(200, 62, 43, 0.4);
+    filter: brightness(1.05);
+}
+
+#recomandari ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#recomandari li {
+    background-color: #ffffff;
+    border-left: 5px solid #c83e2b;
+    padding: 18px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(68, 37, 24, 0.04);
+    border-top: 1px solid #ebdccb;
+    border-right: 1px solid #ebdccb;
+    border-bottom: 1px solid #ebdccb;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#recomandari li:nth-child(1)::before {
+    content: "✈";
+    font-size: 1.3rem;
+    color: #c83e2b;
+}
+
+#recomandari li:nth-child(2)::before {
+    content: "🚌";
+    font-size: 1.3rem;
+}
+
+#recomandari li:nth-child(3)::before {
+    content: "🗺";
+    font-size: 1.3rem;
+}
+
+#recomandari li:hover {
+    transform: translateX(6px);
+    background-color: #fffbf7;
+}
+
+footer {
+    padding: 30px 24px;
+    background-color: #29150d;
+    color: #f7ede2;
+    text-align: center;
+    border-top: 4px solid #c83e2b;
+}
+
