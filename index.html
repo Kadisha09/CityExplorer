@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>City Explorer</h1>
+        <nav>
+            <a href="#destinatii">Destinații</a>
+            <a href="#planifica">Planifică</a>
+            <a href="#recomandari">Recomandări</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="destinatii">
+            <h2>Destinații</h2>
+
+            <article>
+                <h3>Lisabona</h3>
+                <p>Portugalia</p>
+                <p>Oraș de coastă renumit pentru tramvaiele galbene și cartierele istorice.</p>
+                <p>Durată recomandată: 3 zile</p>
+            </article>
+
+            <article>
+                <h3>Roma</h3>
+                <p>Italia</p>
+                <p>Capitala istorică a Italiei, cu Colosseumul și Vaticanul.</p>
+                <p>Durată recomandată: 4 zile</p>
+            </article>
+
+            <article>
+                <h3>Viena</h3>
+                <p>Austria</p>
+                <p>Oraș imperial cunoscut pentru palatele baroce și muzica clasică.</p>
+                <p>Durată recomandată: 3 zile</p>
+            </article>
+
+            <article>
+                <h3>Barcelona</h3>
+                <p>Spania</p>
+                <p>Renumit pentru arhitectura unică a lui Gaudí și plajele mediteraneene.</p>
+                <p>Durată recomandată: 4 zile</p>
+            </article>
+
+            <article>
+                <h3>Praga</h3>
+                <p>Cehia</p>
+                <p>Orașul celor o sută de turnuri și al centrului istoric medieval.</p>
+                <p>Durată recomandată: 3 zile</p>
+            </article>
+        </section>
+
+        <section id="planifica">
+            <h2>Planifică</h2>
+            <form>
+                <label for="name">Nume</label>
+                <input id="name" name="name" type="text">
+
+                <label for="destination">Destinație</label>
+                <select id="destination" name="destination">
+                    <option value="">Alege...</option>
+                    <option value="Lisabona">Lisabona</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Viena">Viena</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Praga">Praga</option>
+                </select>
+
+                <label for="days">Număr de zile</label>
+                <input id="days" name="days" type="number">
+
+                <button type="submit">Planifică excursia</button>
+            </form>
+        </section>
+
+        <section id="recomandari">
+            <h2>Recomandări</h2>
+            <ul>
+                <li>Rezervă biletele pentru muzee și atracții principale online, din timp.</li>
+                <li>Mergi pe jos sau folosește transportul public pentru a descoperi orașul.</li>
+                <li>Încearcă bucătăria locală în cartierele mai puțin turistice.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Vuță-Kadisha Ioana-Cristiana, 2026</p>
+    </footer>
+
+</body>
+</html>
