@@ -21,3 +21,4 @@ export const marcheazaVizitat = (list, id) =>
 export const adaugaDestinatie = (list, d) => [...list, d]
 
 export const stergeDestinatie = (list, id) => list.filter((d) => d.id !== id)
+
